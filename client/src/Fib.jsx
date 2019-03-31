@@ -8,6 +8,14 @@ class Fib extends Component {
     index: ''
   };
 
+  constructor() {
+    this.fetchValues = this.fetchValues.bind(this);
+    this.fetchIndexes = this.fetchIndexes.bind(this);
+    this.handleSubmit = this.handleSubmit.bind(this);
+    this.renderSeenIndexes = this.renderSeenIndexes.bind(this);
+    this.renderValues = this.renderValues.bind(this);
+  }
+
   componentDidMount() {
     this.fetchValues();
     this.fetchIndexes();
