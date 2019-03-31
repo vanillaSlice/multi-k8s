@@ -2,18 +2,20 @@ import React, { Component } from 'react';
 import axios from 'axios';
 
 class Fib extends Component {
-  state = {
-    seenIndexes: [],
-    values: {},
-    index: ''
-  };
+  constructor(props) {
+    super(props);
 
-  constructor() {
     this.fetchValues = this.fetchValues.bind(this);
     this.fetchIndexes = this.fetchIndexes.bind(this);
     this.handleSubmit = this.handleSubmit.bind(this);
     this.renderSeenIndexes = this.renderSeenIndexes.bind(this);
     this.renderValues = this.renderValues.bind(this);
+
+    this.state = {
+      seenIndexes: [],
+      values: {},
+      index: ''
+    };
   }
 
   componentDidMount() {
